@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+    
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #04AA6D;
+            cursor: pointer;
+        }
+    
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #04AA6D;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="container bg-[url('/images/bgforpassword.jpeg')] bg-cover bg-no-repeat h-[100vh] shrink-0 flex justify-center items-center">
+    <div class=" bg-black/10 transition-all duration-200 drop-shadow-2xl rounded-2xl text-center space-y-8 p-10">
+        <!-- <img src="/images/bgforpassword.jpeg"> -->
+        <h1 class="font-mullish font-bold">PASSWORD GENERATOR</h1>
+        <div class="display-container flex justify-between">
+            <input readonly placeholder="PASSWORD" class="display  m-2 p-2 rounded-md" data-passwordDisplay>
+            <button data-copy class=" flex items-center">
+                <img src="/images/copy.svg" width="23" height="23" class="text-center" >
+                <span data-copyMsg class="">      </span>
+            </button>
+        </div>
+        <div class="input-container space-y-8">
+            <div class="length-container flex justify-between">
+                <p>Password length</p>
+                <p data-lengthNumber>10</p>
+            </div>
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+            <div class="text-left">
+                <div>
+                    <input type="checkbox" id="uppercase" class="checkbox">
+                    <label for="uppercase">Include Uppercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Include Symbols</label>
+                </div>
+            </div>
+            <!--strength section-->
+            <div class="strenth-container flex justify-between">
+                <p>Strength</p>
+                <div data-Indicator class="h-4 w-4 border rounded-full"></div>
+            </div>
+            <!--generate password-->
+            <button class="generate-password bg-[#04AA6D] hover:scale-110 transition-all duration-200 text-green-50 m-2 p-2 rounded-md font-bold">Generate Password</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+    
+</html>
