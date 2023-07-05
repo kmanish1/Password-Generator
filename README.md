@@ -1,12 +1,2 @@
-**Step 1:** [Download](https://github.com/thepranaygupta/html-tailwind-css-starter-pack/archive/refs/heads/main.zip) this repo as a zip
-
-**Step 2:** To run:
-
-```bash
-npm install
-npm run start
-```
-
-**Step 3:** Goto [http://localhost:5173](http://localhost:5173)
-
-Facing any issue: [Documentation](https://tailwindcss.com/docs/installation/using-postcss)
+**Password Generator**
+You can generate passwords of length upto 20 characters using numbers, uppercase, lower case and symbols. You can copy the password to clipboard by clicking on the copy icon
